@@ -8,7 +8,7 @@ async function main() {
     const cid = core.getInput('cid'); // Currently, we only support CIDv0
     const chainAddr = core.getInput('crust-endpoint');
 
-    // 2. Check cid and seeds
+    // 2. Check cid
     if (!checkCid(cid)) {
         throw new Error('Illegal inputs');
     }
