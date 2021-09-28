@@ -1,0 +1,23 @@
+name: 'Crust File Replica'
+description: 'Get your file replica on Crust Network'
+author: 'crust'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+
+inputs:
+  cid:
+    description: 'IPFS cid which should be provided to Crust'
+    required: true
+  crust-endpoint:
+    description: 'Crust Chain websocket endpoint'
+    required: false
+    default: 'wss://rpc.crust.network'
+
+outputs:
+  res:
+    description: 'File replicas count on Crust'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

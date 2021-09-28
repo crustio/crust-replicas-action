@@ -1,0 +1,31 @@
+{
+  "name": "crust-replicas-action",
+  "version": "1.0.0",
+  "description": "Get your file replica on Crust Network from Github Action",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crustio/crust-replicas-action"
+  },
+  "keywords": [
+    "crust",
+    "ipfs",
+    "github action"
+  ],
+  "author": "yashiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crustio/crust-replicas-action/issues"
+  },
+  "homepage": "https://github.com/crustio/crust-replicas-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@crustio/type-definitions": "^1.2.0",
+    "@polkadot/api": "^4.1.1",
+    "@vercel/ncc": "^0.27.0"
+  }
+}
