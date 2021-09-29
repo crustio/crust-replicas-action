@@ -1,6 +1,6 @@
 {
   "name": "crust-replicas-action",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get your file replica on Crust Network from Github Action",
   "main": "dist/index.js",
   "scripts": {
