@@ -1,0 +1,18 @@
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Testing on Crust Replicas
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - name: Crust replicas action
+        id: replica
+        uses: crustio/crust-replicas-action@v1.0.0
+        with:
+          cid: QmevJf2rdNibZCGrgeyVJEM82y5DsXgMDHXM6zBtQ6G4Vj
+      - name: Print res
+        run: echo "Replicas ${{ steps.replica.outputs.res }}"
