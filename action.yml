@@ -2,7 +2,7 @@ name: 'Crust File Replica'
 description: 'Get your file replica on Crust Network'
 author: 'crust'
 branding:
-  icon: 'upload-cloud'
+  icon: 'book'
   color: 'orange'
 
 inputs:
