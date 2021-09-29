@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2.1.0
       - name: Crust replicas action
         id: replica
-        uses: crustio/crust-replicas-action@v1.0.1
+        uses: crustio/crust-replicas-action@v1.0.2
         with:
           cid: QmevJf2rdNibZCGrgeyVJEM82y5DsXgMDHXM6zBtQ6G4Vj
       - name: Print res
