@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v2.1.0
       - name: Crust replicas action
         id: replica
-        uses: crustio/crust-replicas-action@v1.0.0
+        uses: crustio/crust-replicas-action@v1.0.1
         with:
           cid: QmevJf2rdNibZCGrgeyVJEM82y5DsXgMDHXM6zBtQ6G4Vj
           crust-endpoint: 'wss://rpc.crust.network'
