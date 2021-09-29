@@ -15,4 +15,4 @@ jobs:
         with:
           cid: QmevJf2rdNibZCGrgeyVJEM82y5DsXgMDHXM6zBtQ6G4Vj
       - name: Print res
-        run: echo "Replicas ${{ steps.replica.outputs.res }}"
+        run: echo "Replicas ${{ steps.replica.outputs.replicaCount }}"
