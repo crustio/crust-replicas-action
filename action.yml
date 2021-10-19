@@ -13,6 +13,14 @@ inputs:
     description: 'Crust Chain websocket endpoint'
     required: false
     default: 'wss://rpc.crust.network'
+  file-replica:
+    description: 'Minimal file replica to return'
+    required: false
+    default: 10
+  max-attempts:
+    description: 'Maximum attempts to get file replica'
+    required: false
+    default: 1
 
 outputs:
   replicaCount:
