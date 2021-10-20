@@ -26,6 +26,8 @@ jobs:
         with:
           cid: QmevJf2rdNibZCGrgeyVJEM82y5DsXgMDHXM6zBtQ6G4Vj
           crust-endpoint: 'wss://rpc.crust.network'
+          file-replica: 10
+          max-attempts: 10
       - name: Print res
         run: echo "Replicas ${{ steps.replica.outputs.replicaCount }}"
 ```
@@ -36,5 +38,7 @@ See the [action.yml](./action.yml) file for more detail information.
 
 * cid - file cid on ipfs
 * crust-endpoint - the endpoint connect to crust mainnet chain
+* file-replica - file replication threshold to return
+* max-attempts - maximum attempts to get file replication
 
 

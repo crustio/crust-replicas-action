@@ -7,6 +7,8 @@ async function main() {
     // 1. Get all inputs
     const cid = core.getInput('cid'); // Currently, we only support CIDv0
     const chainAddr = core.getInput('crust-endpoint');
+    const fileReplica = core.getInput('file-replica');
+    var maxAttempts = core.getInput('max-attempts');
 
     console.log('cid', cid)
     console.log('chainAddr', chainAddr)
@@ -24,7 +26,16 @@ async function main() {
 
     await chain.isReadyOrError;
 
-    const file = parsObj(await chain.query.market.files(cid));
+    var file
+    do
+    {
+        file = parsObj(await chain.query.market.files(cid));
+        if (file && file.reported_replica_count >= fileReplica)
+            break;
+        if (maxAttempts > 1) {
+            await new Promise(resolve => setTimeout(resolve, 60000));
+        }
+    } while (--maxAttempts > 0)
 
     console.log('file', file)
 
